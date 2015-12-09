@@ -323,7 +323,7 @@ function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myComp
             	startY = (startY+lineDistance*(Math.sin(Math.PI*(myAngle+i)/180)));
 				
 
-		myGCode.push("G00 X" + Math.round(startX*100)/100 + " Y" + (Math.round(startY*100)/100)+ ";\n");
+		myGCode.push("G00 X" + Math.round(startX*100)/100 + " Y" + (Math.round(startY*100)/100)+ ";");
 
 		
       	 }
@@ -333,24 +333,24 @@ function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myComp
 	context.stroke();
 	
 	context.strokeStyle="#ffcc00";
-	
-	
 
 }
-
-
-
 
 function generateGCode() {
-	document.write("G21;");
-	document.write("M107;");
- 	for (i = 0; i < myGCode.length; i++) {
-	document.write(myGCode[i] + "\n");
-	}
+
+	var preCode = ["G21;", "M107;"];
+    var finalCode = preCode.concat(myGCode).join("\n");
+	download('yournewpancake.txt', finalCode);
 }
 
 
-
-
-
-
+function download(filename, text) {
+    debugger;
+    var element = document.createElement('a');
+	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + text);
+	element.setAttribute('download', filename);
+	element.style.display = 'none';
+	document.body.appendChild(element);
+	element.click();
+	document.body.removeChild(element);
+}
