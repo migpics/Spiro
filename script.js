@@ -7,7 +7,7 @@ var context = a_canvas.getContext("2d");
 
 var bar1, slider1;
 var bar2, slider2;
-var set_perc1=.50;
+var set_perc1=.70;
 var set_perc2=.50;
 var set_perc3=.50;
 var set_perc4=.50;
