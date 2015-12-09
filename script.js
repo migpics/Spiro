@@ -70,7 +70,18 @@ function init(){
 	info7 = document.getElementById('info7');
 	bar7.addEventListener('mousedown', startSlide7, false);	
 	bar7.addEventListener('mouseup', stopSlide7, false);
+
+
 }
+
+
+//Inital Slider Event
+
+function defaultSlider(){
+	
+	
+}
+
 
 //Start Slide Events
 
@@ -292,8 +303,11 @@ function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myComp
    	 myAngle = myAngle+angleChange;
     		
         	for (var i = 0; i < myCompletionAngle; i++) {
+		 context.gobalAlpha = 0.1;
            	 context.lineTo(startX+lineDistance*(Math.cos(Math.PI*(myAngle+i)/180)),(startY+lineDistance*(Math.sin(Math.PI*	(myAngle+i)/180))));
-           	 startX = (startX+lineDistance*(Math.cos(Math.PI*(myAngle+i)/180)));
+           	
+			
+		startX = (startX+lineDistance*(Math.cos(Math.PI*(myAngle+i)/180)));
 
             	startY = (startY+lineDistance*(Math.sin(Math.PI*(myAngle+i)/180)));
 				
@@ -303,10 +317,12 @@ function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myComp
 		
       	 }
 	}
+	context.gobalAlpha = 0.1;
 	context.lineWidth = 2;
 	context.stroke();
-	context.gobalAlpha = 0.1;
+	
 	context.strokeStyle="#ffcc00";
+	
 	
 
 }
@@ -322,7 +338,7 @@ function generateGCode() {
 	}
 }
 
-draw(200,75,75,.43,320,20,240);
+
 
 
 

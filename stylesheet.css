@@ -8,20 +8,22 @@ canvas {
 	height:25px;
 	border:1px solid black;
 	position:relative;
+	margin: auto;
 }
 #slider1{
 	width:0%;
 	height:100%;
-	background-color:red;
+	background-color:#ffcc00;
 	top:0px;
 	left:0px;
 	position:absolute;
 	cursor:pointer;
+	margin: auto;
 }
 #info1{
 	width:200px;
 	height:25px;
-	
+	margin: auto;
 }
 
 
@@ -30,19 +32,22 @@ canvas {
 	height:25px;
 	border:1px solid black;
 	position:relative;
+	margin: auto;
 }
 #slider2{
 	width:0%;
 	height:100%;
-	background-color:red;
+	background-color:#ffcc00;
 	top:0px;
 	left:0px;
 	position:absolute;
 	cursor:pointer;
+	margin: auto;
 }
 #info2{
 	width:200px;
 	height:25px;
+	margin: auto;
 	
 }
 
@@ -52,19 +57,22 @@ canvas {
 	height:25px;
 	border:1px solid black;
 	position:relative;
+	margin: auto;
 }
 #slider3{
 	width:0%;
 	height:100%;
-	background-color:red;
+	background-color:#ffcc00;
 	top:0px;
 	left:0px;
 	position:absolute;
 	cursor:pointer;
+	margin: auto;
 }
 #info3{
 	width:200px;
 	height:25px;
+	margin: auto;
 	
 }
 
@@ -74,19 +82,22 @@ canvas {
 	height:25px;
 	border:1px solid black;
 	position:relative;
+	margin: auto;
 }
 #slider4{
 	width:0%;
 	height:100%;
-	background-color:red;
+	background-color:#ffcc00;
 	top:0px;
 	left:0px;
 	position:absolute;
 	cursor:pointer;
+	margin: auto;
 }
 #info4{
 	width:200px;
 	height:25px;
+	margin: auto;
 	
 }
 
@@ -96,19 +107,22 @@ canvas {
 	height:25px;
 	border:1px solid black;
 	position:relative;
+	margin: auto;
 }
 #slider5{
 	width:0%;
 	height:100%;
-	background-color:red;
+	background-color:#ffcc00;
 	top:0px;
 	left:0px;
 	position:absolute;
 	cursor:pointer;
+	margin: auto;
 }
 #info5{
 	width:200px;
 	height:25px;
+	margin: auto;
 	
 }
 
@@ -119,20 +133,22 @@ canvas {
 	height:25px;
 	border:1px solid black;
 	position:relative;
+	margin: auto;
 }
 #slider6{
 	width:0%;
 	height:100%;
-	background-color:red;
+	background-color:#ffcc00;
 	top:0px;
 	left:0px;
 	position:absolute;
 	cursor:pointer;
+	margin: auto;
 }
 #info6{
 	width:200px;
 	height:25px;
-	
+	margin: auto;
 }
 
 
@@ -142,12 +158,14 @@ canvas {
 	height:25px;
 	border:1px solid black;
 	position:relative;
+	margin: auto;
 }
 #slider7{
 	width:0%;
 	height:100%;
-	background-color:red;
+	background-color:#ffcc00;
 	top:0px;
+	margin: auto;
 	left:0px;
 	position:absolute;
 	cursor:pointer;
@@ -155,6 +173,7 @@ canvas {
 #info7{
 	width:200px;
 	height:25px;
+	margin: auto;
 	
 }
 

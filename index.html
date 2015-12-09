@@ -4,8 +4,8 @@
         <title>Spiral GCode Generator</title>
         <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
     </head>
-    <body onload='init()'>
-        <canvas id="a" width="400" height="200">
+    <body onload='init()' align=center>
+        <canvas id="a" width="400" height="200" >
             This text is displayed if your browser does not support HTML5 Canvas.
         </canvas>
   
@@ -13,9 +13,11 @@
 
 <br>This code is still in development.<br>
 To create a spiral, select a point on the sliders starting from the top slider (Clip Angle) and work your way down.<br>
+<br>
 TIP:  For your first spiral, set all the sliders to the middle.
-<div id='bar7'>
-<div id='slider7'>
+<br>
+<div id='bar7' >
+<div id='slider7' >
 </div>
 </div>
 
@@ -70,13 +72,11 @@ TIP:  For your first spiral, set all the sliders to the middle.
 <div id='info1'>X Axis</div>
 <br />
 
-<br>Click the button to generate the GCode for your Spiral Pancake.
-<br>Copy and paste the code to a text file and save it as spiral.gcode
-<br>Copy this to a SD card and insert it into the PancakeBot & Print out!
+
 <br><button onclick="generateGCode()">Generate GCode</button>
 
-
+<script type='text/javascript' src='script.js'></script>
     </body>
 
-      <script type='text/javascript' src='script.js'></script>
+      
 </html>
