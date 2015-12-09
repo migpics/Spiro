@@ -340,7 +340,7 @@ function generateGCode() {
 
 	var preCode = ["G21;", "M107;"];
     var finalCode = preCode.concat(myGCode).join("\n");
-	download('yournewpancake.txt', finalCode);
+	download('Your_New_Spiral.txt', finalCode);
 }
 
 
