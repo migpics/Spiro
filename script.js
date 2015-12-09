@@ -10,9 +10,9 @@ var bar2, slider2;
 var set_perc1=.50;
 var set_perc2=.50;
 var set_perc3=.50;
-var set_perc4=.50;
+var set_perc4=.30;
 var set_perc5=.50;
-var set_perc6=.50;
+var set_perc6=.85;
 var set_perc7=.50;
 
 canvas_width=400;
