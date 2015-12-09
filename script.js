@@ -7,13 +7,13 @@ var context = a_canvas.getContext("2d");
 
 var bar1, slider1;
 var bar2, slider2;
-var set_perc1=10;
-var set_perc2=20;
-var set_perc3=20;
-var set_perc4=20;
-var set_perc5=20;
-var set_perc6=20;
-var set_perc7=20;
+var set_perc1=.50;
+var set_perc2=.50;
+var set_perc3=.50;
+var set_perc4=.50;
+var set_perc5=.50;
+var set_perc6=.50;
+var set_perc7=.50;
 
 canvas_width=400;
 canvas_height=200;
@@ -71,7 +71,18 @@ function init(){
 	bar7.addEventListener('mousedown', startSlide7, false);	
 	bar7.addEventListener('mouseup', stopSlide7, false);
 
-
+	slider1.style.width = (set_perc1 * 100) + '%';
+	slider2.style.width = (set_perc1 * 100) + '%';
+	slider3.style.width = (set_perc1 * 100) + '%';
+	slider4.style.width = (set_perc1 * 100) + '%';
+	slider5.style.width = (set_perc1 * 100) + '%';
+	slider6.style.width = (set_perc1 * 100) + '%';
+	slider7.style.width = (set_perc1 * 100) + '%';	
+	
+	
+	context.strokeStyle="#ffcc00";
+	draw(canvas_width*set_perc1,canvas_height*set_perc2,myAngle*set_perc3,lineDistance*set_perc4,angleChange*set_perc5,myIterations*set_perc6,myCompletionAngle*set_perc7);
+	
 }
 
 
