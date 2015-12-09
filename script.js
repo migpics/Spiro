@@ -7,13 +7,13 @@ var context = a_canvas.getContext("2d");
 
 var bar1, slider1;
 var bar2, slider2;
-var set_perc1=.50;
-var set_perc2=.50;
+var set_perc1=.65;
+var set_perc2=.35;
 var set_perc3=.50;
-var set_perc4=.50;
-var set_perc5=.50;
+var set_perc4=.80;
+var set_perc5=.80;
 var set_perc6=.50;
-var set_perc7=.50;
+var set_perc7=.60;
 
 canvas_width=400;
 canvas_height=200;
@@ -301,6 +301,8 @@ function stopSlide7(event){
 
 //End Slider Code
 
+var line;
+
 function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myCompletionAngle){
 
 	context.clearRect(0, 0, a_canvas.width, a_canvas.height);
@@ -314,8 +316,9 @@ function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myComp
    	 myAngle = myAngle+angleChange;
     		
         	for (var i = 0; i < myCompletionAngle; i++) {
-		 context.gobalAlpha = 0.1;
-           	 context.lineTo(startX+lineDistance*(Math.cos(Math.PI*(myAngle+i)/180)),(startY+lineDistance*(Math.sin(Math.PI*	(myAngle+i)/180))));
+		 
+			
+           	 line = context.lineTo(startX+lineDistance*(Math.cos(Math.PI*(myAngle+i)/180)),(startY+lineDistance*(Math.sin(Math.PI*	(myAngle+i)/180))));
            	
 			
 		startX = (startX+lineDistance*(Math.cos(Math.PI*(myAngle+i)/180)));
@@ -328,11 +331,11 @@ function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myComp
 		
       	 }
 	}
-	context.gobalAlpha = 0.1;
+	
 	context.lineWidth = 2;
 	context.stroke();
 	
-	context.strokeStyle="#ffcc00";
+	context.strokeStyle="rgba(230, 187, 0, 1)";
 	
 	
 
