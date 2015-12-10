@@ -71,13 +71,13 @@ function init(){
 	bar7.addEventListener('mousedown', startSlide7, false);	
 	bar7.addEventListener('mouseup', stopSlide7, false);
 
-	slider1.style.width = (set_perc1 * 100) + '%';
-	slider2.style.width = (set_perc1 * 100) + '%';
-	slider3.style.width = (set_perc1 * 100) + '%';
-	slider4.style.width = (set_perc1 * 100) + '%';
-	slider5.style.width = (set_perc1 * 100) + '%';
-	slider6.style.width = (set_perc1 * 100) + '%';
-	slider7.style.width = (set_perc1 * 100) + '%';	
+	slider1.style.width = (set_perc1 * 100  + '%');
+	slider2.style.width = (set_perc2 * 100  + '%');
+	slider3.style.width = (set_perc3 * 100  + '%');
+	slider4.style.width = (set_perc4 * 100  + '%');
+	slider5.style.width = (set_perc5 * 100  + '%');
+	slider6.style.width = (set_perc6 * 100  + '%');
+	slider7.style.width = (set_perc7 * 100  + '%');	
 	
 	
 	context.strokeStyle="#ffcc00";
@@ -154,46 +154,46 @@ function startSlide7(event){
 
 function moveSlide1(event){
 	set_perc1 = ((((event.clientX - bar1.offsetLeft) / bar1.offsetWidth)).toFixed(2));
-	info1.innerHTML = 'moving 1: ' + set_perc1 + '%';
-	slider1.style.width = (set_perc1 * 100) + '%';
+	info1.innerHTML = 'X Axis' + Math.round(set_perc1*canvas_width);
+	slider1.style.width = (set_perc1 * 100);
 }
 
 function moveSlide2(event){
 	set_perc2 = ((((event.clientX - bar2.offsetLeft) / bar2.offsetWidth)).toFixed(2));
-	info2.innerHTML = 'moving 2: ' + set_perc2 + '%';
+	info2.innerHTML = 'Y Axis ' + Math.round(set_perc2*canvas_height);
 	slider2.style.width = (set_perc2 * 100) + '%';
 }
 
 function moveSlide3(event){
 	set_perc3 = ((((event.clientX - bar3.offsetLeft) / bar3.offsetWidth)).toFixed(2));
-	info3.innerHTML = 'moving 3: ' + set_perc3 + '%';
+	info3.innerHTML = 'Angle Start ' + Math.round(set_perc3*100) + ' Degrees';
 	slider3.style.width = (set_perc3 * 100) + '%';
 }
 
 function moveSlide4(event){
 	set_perc4 = ((((event.clientX - bar4.offsetLeft) / bar4.offsetWidth)).toFixed(2));
-	info4.innerHTML = 'moving 4: ' + set_perc4 + '%';
+	info4.innerHTML = 'Size ' + Math.round(set_perc4*100);
 	slider4.style.width = (set_perc4 * 100) + '%';
 }
 
 
 function moveSlide5(event){
 	set_perc5 = ((((event.clientX - bar5.offsetLeft) / bar5.offsetWidth)).toFixed(2));
-	info5.innerHTML = 'moving 5: ' + set_perc5 + '%';
+	info5.innerHTML = 'Angle 1 ' + Math.round(set_perc5*360) + ' Degrees';
 	slider5.style.width = (set_perc5 * 100) + '%';
 }
 
 
 function moveSlide6(event){
 	set_perc6 = ((((event.clientX - bar6.offsetLeft) / bar6.offsetWidth)).toFixed(2));
-	info6.innerHTML = 'moving 6: ' + set_perc6 + '%';
+	info6.innerHTML = 'Iterations ' + Math.round(set_perc6*36);
 	slider6.style.width = (set_perc6 * 100) + '%';
 }
 
 
 function moveSlide7(event){
 	set_perc7 = ((((event.clientX - bar7.offsetLeft) / bar7.offsetWidth)).toFixed(2));
-	info7.innerHTML = 'moving 7: ' + set_perc7 + '%';
+	info7.innerHTML = 'Clip Angle ' + Math.round(set_perc7*360)  + ' Degrees';
 	slider7.style.width = (set_perc7 * 100) + '%';
 }
 
@@ -232,7 +232,7 @@ function stopSlide2(event){
 function stopSlide3(event){
 	set_perc3 = ((((event.clientX - bar3.offsetLeft) / bar3.offsetWidth)).toFixed(2));
 	
-	info3.innerHTML = 'Angle Start ' + Math.round(set_perc3*100);
+	info3.innerHTML = 'Angle Start ' + Math.round(set_perc3*100) + ' Degrees';
 	
 	bar3.removeEventListener('mousemove', moveSlide3, false);
 
@@ -258,7 +258,7 @@ function stopSlide4(event){
 function stopSlide5(event){
 	set_perc5 = ((((event.clientX - bar5.offsetLeft) / bar5.offsetWidth)).toFixed(2));
 	
-	info5.innerHTML = 'Angle 1 ' + Math.round(set_perc5*360);
+	info5.innerHTML = 'Angle 1 ' + Math.round(set_perc5*360) + ' Degrees';
 	
 	bar5.removeEventListener('mousemove', moveSlide5, false);
 
@@ -284,7 +284,7 @@ function stopSlide6(event){
 function stopSlide7(event){
 	set_perc7 = ((((event.clientX - bar7.offsetLeft) / bar7.offsetWidth)).toFixed(2));
 	
-	info7.innerHTML = 'Clip Angle ' + Math.round(set_perc7*360);
+	info7.innerHTML = 'Clip Angle ' + Math.round(set_perc7*360) + ' Degrees';
 	
 	bar7.removeEventListener('mousemove', moveSlide7, false);
 
@@ -323,7 +323,7 @@ function draw(startX,startY,myAngle,lineDistance,angleChange,myIterations,myComp
             	startY = (startY+lineDistance*(Math.sin(Math.PI*(myAngle+i)/180)));
 				
 
-		myGCode.push("G00 X" + Math.round(startX*100)/100 + " Y" + (Math.round(startY*100)/100)+ ";");
+		myGCode.push("G00 X" + Math.round(startX*10)/10 + " Y" + (Math.round(startY*100)/100)+ ";");
 
 		
       	 }
